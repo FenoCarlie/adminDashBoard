@@ -1,0 +1,16 @@
+.sideBar {
+  font-size: 15px;
+}
+
+.sideBar ul {
+  padding: 10px 0;
+  width: 100%;
+}
+
+.sideBar a {
+  padding: 0.8rem 1.1rem;
+}
+
+.sideBar::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.3);
+}

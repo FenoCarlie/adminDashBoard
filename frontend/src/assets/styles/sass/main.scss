@@ -1,0 +1,19 @@
+@import "./variable.scss";
+
+@mixin theme-light {
+  background-color: $color-bg-light-primar;
+  color: $color-text-light;
+}
+
+@mixin theme-dark {
+  background-color: $color-bg-dark-primar;
+  color: $color-text-dark;
+}
+
+main {
+  @include theme-light;
+
+  .dark & {
+    @include theme-dark;
+  }
+}
