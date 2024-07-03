@@ -1,0 +1,10 @@
+.header a,
+.header button,
+.header .user {
+  padding: 15px 15px;
+}
+
+.header svg {
+  width: 20px;
+  height: 20px;
+}

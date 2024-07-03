@@ -12,10 +12,28 @@
   box-shadow: 1px 5px 6px rgba(0, 0, 0, 0.09);
 }
 
+@mixin link-light {
+  color: $color-text-light;
+}
+
+@mixin link-dark {
+  color: $color-blue-dark;
+}
+
 .header {
   @include theme-light;
 
   .dark & {
     @include theme-dark;
+  }
+}
+
+.header a,
+.header .user,
+.burger {
+  @include link-light;
+
+  .dark & {
+    @include link-dark;
   }
 }

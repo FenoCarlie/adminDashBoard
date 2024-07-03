@@ -3,6 +3,7 @@
 @import "./sass/sideBar.scss";
 @import "./sass/main.scss";
 @import "./css/sideBar.css";
+@import "./css/header.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
