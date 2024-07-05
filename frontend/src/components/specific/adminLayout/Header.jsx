@@ -19,8 +19,10 @@ import UserDropDown from "../../DropDownContent/UserDropDown";
 import Modal from "../../common/Modal";
 import SearchModal from "../../modalContent/SearchModal";
 import LanguageDropDown from "../../DropDownContent/LanguageDropDown";
+import { useLanguage } from "../../../contexts/LanguageContext";
 
 function Header() {
+  const { translate } = useLanguage();
   const [layoutIsOpen, setLayoutIsOpen] = useState(false);
   const [clientIsOpen, setClientIsOpen] = useState(false);
   const [dashboardIsOpen, setDashboardIsOpen] = useState(false);

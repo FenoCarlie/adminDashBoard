@@ -74,7 +74,7 @@ const router = createBrowserRouter([
       { path: "/help", element: <Help /> },
       { path: "/help/help_articles", element: <Articles /> },
       { path: "/help/help_categories", element: <Categories /> },
-      { path: "/knowledge_base", element: <Kwnowledge /> },
+      { path: "/help/knowledge_base", element: <Kwnowledge /> },
       {
         path: "/help/knowledge_base_articles",
         element: <KnowledgeBaseArticles />,
