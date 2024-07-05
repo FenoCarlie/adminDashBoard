@@ -6,7 +6,10 @@ const ThemeContext = createContext();
 
 // ThemeProvider component to manage and provide the theme
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState("light");
+  // Initialize the theme from sessionStorage or default to "light"
+  const [theme, setTheme] = useState(() => {
+    return sessionStorage.getItem("theme") || "light";
+  });
 
   useEffect(() => {
     const root = window.document.documentElement;
@@ -16,6 +19,9 @@ export const ThemeProvider = ({ children }) => {
     themes.forEach((t) => root.classList.remove(t));
     // Add the current theme class
     root.classList.add(theme);
+
+    // Store the theme in sessionStorage
+    sessionStorage.setItem("theme", theme);
   }, [theme]); // Re-run this effect whenever 'theme' changes
 
   // Function to change the theme

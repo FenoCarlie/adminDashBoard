@@ -5,8 +5,11 @@ const LanguageContext = createContext();
 
 // Provider component to manage and provide language data
 export const LanguageProvider = ({ children }) => {
-  // State to store the current language (default is "En")
-  const [currentLanguage, setCurrentLanguage] = useState("En");
+  // Initialize the current language from sessionStorage or default to "En"
+  const [currentLanguage, setCurrentLanguage] = useState(() => {
+    return sessionStorage.getItem("language") || "En";
+  });
+
   // State to store the current translations
   const [currentTranslations, setCurrentTranslations] = useState({});
 
@@ -21,6 +24,9 @@ export const LanguageProvider = ({ children }) => {
     };
 
     loadTranslations(currentLanguage);
+
+    // Store the current language in sessionStorage
+    sessionStorage.setItem("language", currentLanguage);
   }, [currentLanguage]); // Dependency array with currentLanguage to re-run the effect when it changes
 
   // Function to change the current language

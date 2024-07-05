@@ -11,13 +11,13 @@
 }
 
 @mixin link-active-light {
-  background-color: $color-blue-light;
-  color: $color-white-1;
+  background-color: $color-blue-light !important;
+  color: $color-white-1 !important;
 }
 
 @mixin link-active-dark {
-  background-color: $color-bg-dark-primar;
-  color: $color-blue-dark;
+  background-color: $color-bg-dark-primar !important;
+  color: $color-blue-dark !important;
 }
 
 @mixin logo-light {
@@ -26,6 +26,15 @@
 
 @mixin logo-dark {
   box-shadow: 1px 5px 6px rgba(0, 0, 0, 0.09);
+}
+
+@mixin link-light-hover {
+  background-color: $color-white-2;
+}
+
+@mixin link-dark-hover {
+  background-color: $color-bg-dark-primar;
+  color: $color-blue-dark;
 }
 
 .sideBar {
@@ -49,5 +58,14 @@
 
   .dark & {
     @include logo-dark;
+  }
+}
+
+.sideBar a:hover,
+.sideBar link:hover {
+  @include link-light-hover;
+
+  .dark & {
+    @include link-dark-hover;
   }
 }

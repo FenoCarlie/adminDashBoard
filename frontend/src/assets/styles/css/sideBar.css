@@ -3,12 +3,19 @@
 }
 
 .sideBar ul {
-  padding: 10px 0;
+  padding: 10px 10px;
   width: 100%;
 }
 
-.sideBar a {
-  padding: 0.8rem 1.1rem;
+.sideBar a,
+.sideBar .link {
+  padding: 10px 1.1rem;
+  border-radius: 5px;
+}
+
+.sideBar svg {
+  width: 20px;
+  height: 24px;
 }
 
 .sideBar::-webkit-scrollbar-thumb {
