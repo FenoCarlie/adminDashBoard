@@ -2,8 +2,10 @@
 @import "./sass/header.scss";
 @import "./sass/sideBar.scss";
 @import "./sass/main.scss";
+@import "./sass/modal.scss";
 @import "./css/sideBar.css";
 @import "./css/header.css";
+@import "./sass/dropBown.scss";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

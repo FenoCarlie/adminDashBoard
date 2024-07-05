@@ -10,14 +10,14 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <ThemeProvider>
-      <LanguageProvider>
+    <LanguageProvider>
+      <ThemeProvider>
         <NotificationProvider>
           <AuthentContext>
             <RouterProvider router={router} />
           </AuthentContext>
         </NotificationProvider>
-      </LanguageProvider>
-    </ThemeProvider>
+      </ThemeProvider>
+    </LanguageProvider>
   </React.StrictMode>
 );

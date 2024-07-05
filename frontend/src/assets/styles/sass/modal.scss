@@ -1,0 +1,19 @@
+@import "./variable.scss";
+
+@mixin theme-light {
+  background-color: $color-bg-light-secondar;
+  color: $color-text-light;
+}
+
+@mixin theme-dark {
+  background-color: $color-blue-grey;
+  color: $color-text-dark;
+}
+
+.modal {
+  @include theme-light;
+
+  .dark & {
+    @include theme-dark;
+  }
+}

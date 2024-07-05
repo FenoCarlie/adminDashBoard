@@ -1,0 +1,64 @@
+@import "./variable.scss";
+
+@mixin theme-light {
+  background-color: $color-bg-light-secondar;
+  color: $color-text-light;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+@mixin theme-dark {
+  background-color: $color-bg-dark-secondar;
+  color: $color-text-dark;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+@mixin divider-light {
+  height: 0;
+  margin: var(--bs-dropdown-divider-margin-y) 0;
+  overflow: hidden;
+  border-top: 1px solid;
+  border-color: #e2e7f1;
+  opacity: 1;
+}
+
+@mixin divider-dark {
+  height: 0;
+  margin: var(--bs-dropdown-divider-margin-y) 0;
+  overflow: hidden;
+  border-top: 1px solid;
+  border-color: #2f3541;
+  opacity: 1;
+}
+
+@mixin link-user-dropDown-light-hover {
+  background-color: $color-white-2;
+}
+
+@mixin link-user-dropDown-dark-hover {
+  background-color: $color-bg-dark-primar;
+  color: $color-blue-dark;
+}
+
+.dropDown {
+  @include theme-light;
+
+  .dark & {
+    @include theme-dark;
+  }
+}
+
+.divider {
+  @include divider-light;
+
+  .dark & {
+    @include divider-dark;
+  }
+}
+
+.dropDownContent .item:hover {
+  @include link-user-dropDown-light-hover;
+
+  .dark & {
+    @include link-user-dropDown-dark-hover;
+  }
+}
