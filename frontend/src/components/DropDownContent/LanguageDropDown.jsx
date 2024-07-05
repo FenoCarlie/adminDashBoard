@@ -19,10 +19,10 @@ function LanguageDropDown() {
   };
   return (
     <div className="dropDownContent flex w-full h-[300px]">
-      <ul className="w-full flex items-start flex-col overflow-auto h-full">
+      <ul className="w-full flex flex-col overflow-auto h-full">
         {languageList.map((language) => (
           <li
-            className="item px-[1.25rem] py-[0.7rem] block"
+            className="item items-start flex w-full px-[1.25rem] py-[0.7rem] block"
             key={language.value}
             onClick={() => handleChangeLanguage(`${language.value}`)}
           >
