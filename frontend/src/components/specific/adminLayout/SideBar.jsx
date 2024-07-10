@@ -29,7 +29,6 @@ function SideBar() {
   const location = useLocation();
   const [expandedGroups, setExpandedGroups] = useState({});
 
-  // Définition des groupes avec leurs liens respectifs
   const sidebarLink = [
     { to: "/dashboard", label: translate("dashboard"), icon: <FiMonitor /> },
     { to: "/events", label: translate("events"), icon: <FiCalendar /> },

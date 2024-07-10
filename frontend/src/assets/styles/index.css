@@ -5,6 +5,7 @@
 @import "./sass/modal.scss";
 @import "./css/sideBar.css";
 @import "./css/header.css";
+@import "./sass/table.scss";
 @import "./sass/dropBown.scss";
 @tailwind base;
 @tailwind components;
@@ -67,4 +68,12 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .slide-down {
   animation: slideDown 0.5s ease-in-out;
+}
+
+* {
+  transition: all 0.5s;
+}
+
+.fade {
+  transition: opacity 0.15s linear;
 }

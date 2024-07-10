@@ -7,15 +7,15 @@ import Header from "../components/specific/adminLayout/Header";
 function AdminLayout() {
   const { notifications } = useNotificationContext();
   return (
-    <div className="w-full h-screen flex flex-row">
-      <nav className="w-auto h-auto">
+    <div className="w-full h-screen flex flex-row overflow-hidden">
+      <nav className="w-auto h-full">
         <SideBar />
       </nav>
-      <div className="w-full h-full flex flex-col">
+      <div className="w-full h-full flex flex-col ">
         <header className="w-full h-[67px]">
           <Header />
         </header>
-        <main className="w-full h-full">
+        <main className="w-full h-full overflow-auto">
           <Outlet />
         </main>
       </div>

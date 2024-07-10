@@ -1,0 +1,132 @@
+@import "./variable.scss";
+
+@mixin theme-light {
+  background-color: $color-bg-light-secondar;
+  color: $color-text-light;
+}
+
+@mixin theme-dark {
+  background-color: $color-blue-grey;
+  color: $color-text-dark;
+}
+
+@mixin rowsPerPage-light {
+  background-color: $color-bg-light-secondar !important;
+  color: $color-text-light !important;
+}
+
+@mixin rowsPerPage-dark {
+  background-color: $color-grey-blue !important;
+  color: $color-grey-light !important;
+}
+
+@mixin rowsPerPageSelect-light {
+  background-color: $color-bg-light-secondar !important;
+  color: $color-text-light !important;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+}
+
+@mixin rowsPerPageSelect-dark {
+  background-color: $color-bg-dark-primar !important;
+  color: $color-grey-light !important;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+}
+
+@mixin rowsPerPageSelect-li-light {
+  background-color: $color-blue-light !important;
+  color: $color-bg-light-secondar !important;
+}
+
+@mixin rowsPerPageSelect-li-dark {
+  background-color: $color-bg-dark-primar !important;
+  color: $color-grey-light !important;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+}
+
+@mixin tr-light {
+  background-color: #f2f4f6 !important;
+}
+
+@mixin tr-dark {
+  background-color: #2b303b !important;
+}
+
+@mixin visibleColumns-light {
+  background-color: $color-bg-light-secondar !important;
+  color: $color-text-light;
+  border: solid 1px #a5a5a580;
+}
+
+@mixin visibleColumns-dark {
+  background-color: $color-blue-grey !important;
+  color: $color-text-dark;
+  border: solid 1px #2f3541;
+}
+
+.table,
+.table select {
+  @include theme-light;
+
+  .dark & {
+    @include theme-dark;
+  }
+}
+
+.rowsPerPage {
+  @include rowsPerPage-light;
+
+  .dark & {
+    @include rowsPerPage-dark;
+  }
+}
+
+.borderBottom {
+  border-bottom: 0.1px solid rgba(221, 230, 233, 0.48);
+
+  .dark & {
+    border-bottom: 0.1px solid #2f3541;
+  }
+}
+
+.rowsPerPage .borderStyle {
+  border: 0.5px solid #aaaaaa36;
+}
+
+.rowsPerPageSelect {
+  @include rowsPerPageSelect-light;
+
+  .dark & {
+    @include rowsPerPageSelect-dark;
+  }
+}
+
+.rowsPerPageSelect li:hover {
+  background-color: $color-blue-light !important;
+  color: $color-bg-light-secondar !important;
+}
+
+.activeOption {
+  background-color: $color-blue-light !important;
+  color: $color-bg-light-secondar !important;
+}
+
+.table .tr:hover {
+  @include tr-light;
+
+  .dark & {
+    @include tr-dark;
+  }
+}
+
+.visibleColumns {
+  @include visibleColumns-light;
+
+  .dark & {
+    @include visibleColumns-dark;
+  }
+}
+
+.colonHidden {
+  background-color: $color-blue-light !important;
+  color: $color-bg-light-secondar !important;
+}
